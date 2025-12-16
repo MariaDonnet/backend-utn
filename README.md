@@ -45,7 +45,6 @@ Desarrollar una API REST funcional que permita:
 
 ## 📁 Estructura del Proyecto
 
-
 ---
 
 ## 🔐 Variables de Entorno
@@ -77,6 +76,8 @@ Ejecutar en produccion:
 
 npm start
 
+---
+
 🌐 Deploy
 
 El backend se encuentra desplegado en Render y disponible públicamente.
@@ -84,6 +85,8 @@ El backend se encuentra desplegado en Render y disponible públicamente.
 URL base:
 
 https://backend-utn-u8mm.onrender.com
+
+---
 
 📌 Endpoints Principales
 🔐 Autenticación
@@ -101,6 +104,8 @@ POST /auth/login
   "email": "usuario@mail.com",
   "password": "password123"
 }
+
+---
 
 📦 Productos
 
@@ -127,6 +132,8 @@ Actualizar producto.
 DELETE /products/:id 🔒
 Eliminar producto.
 
+---
+
 🔒 Seguridad
 
 Autenticación con JWT
@@ -137,6 +144,8 @@ Rutas protegidas para crear, actualizar y eliminar
 
 Rate limit aplicado en rutas de autenticación
 
+---
+
 📸 Subida de Archivos
 
 Implementada con multer
@@ -144,6 +153,8 @@ Implementada con multer
 Archivos almacenados en /uploads
 
 Servidos de forma estática
+
+---
 
 🧪 Pruebas
 
@@ -160,6 +171,8 @@ CRUD de productos
 Filtros
 
 Autorización
+
+---
 
 ✅ Cumplimiento de la Consigna
 
@@ -182,6 +195,8 @@ Autorización
 ✔ Deploy en Render
 
 ✔ Variables de entorno
+
+---
 
 📝 Observaciones
 
