@@ -1,7 +1,7 @@
 API REST desarrollada en Node.js + Express + TypeScript + MongoDB, como parte del
 Trabajo Práctico: Desarrollo y Deploy de una API REST en TypeScript (UTN).
 
-Este repositorio contiene **exclusivamente el backend** del proyecto.
+Este repositorio contiene solo **el backend** del proyecto.
 
 ---
 
@@ -11,6 +11,7 @@ Este repositorio contiene **exclusivamente el backend** del proyecto.
 - **Proyecto:** Backend UTN – API REST  
 - **Rol:** Estudiante de Programación Web Full Stack  
 - **GitHub:** https://github.com/MariaDonnet  
+- **Linkedin:**[Maria Soledad Donnet] (https://www.linkedin.com/in/maría-soledad-donnet/)
 
 ---
 
@@ -24,27 +25,52 @@ Desarrollar una API REST funcional que permita:
 - Filtrado mediante query params
 - Subida de imágenes
 - Uso de variables de entorno
-- Deploy en un servicio cloud
+- Deploy del backend en un servicio cloud (Render)
 
 ---
 
 ## 🛠️ Tecnologías Utilizadas
 
-- Node.js
-- Express
-- TypeScript
-- MongoDB + Mongoose
-- JWT (jsonwebtoken)
-- bcryptjs
-- multer
-- zod
-- morgan
-- dotenv
+- **Node.js**
+- **Express**
+- **TypeScript**
+- **MongoDB + Mongoose**
+- **JWT (jsonwebtoken)** – Autenticación
+- **bcryptjs** – Hash de contraseñas
+- **Multer** – Subida de imágenes
+- **Zod** – Validación de datos
+- **Morgan** – Logger de requests
+- **dotenv** – Variables de entorno
 
 ---
 
 ## 📁 Estructura del Proyecto
 
+```bash
+backend-utn/
+├── dist/                # Código compilado (producción)
+├── logs/                # Logs del servidor
+├── uploads/             # Imágenes de productos
+├── src/
+│   ├── config/
+│   ├── controllers/
+│   ├── interfaces/
+│   ├── middleware/
+│   ├── model/
+│   ├── routes/
+│   ├── services/
+│   ├── templates/
+│   ├── validators/
+│   └── index.ts
+├── .env
+├── .env.example
+├── .gitignore
+├── package-lock.json
+├── package.json
+├── products.json
+├── tsconfig.json
+└── README.md
+```
 ---
 
 ## 🔐 Variables de Entorno
@@ -57,84 +83,116 @@ JWT_SECRET=
 URI_DB=
 EMAIL_USER=
 EMAIL_PASS=
+```
+Ejemplo:
 
-▶️ Scripts Disponibles
+```bash
+# Puerto del servidor
+PORT=3000
 
-Instalar dependencias:
+# Base de datos (MongoDB Atlas)
+URI_DB=mongodb+srv://usuario:password@cluster.mongodb.net/mi-base-de-datos
 
-npm install
+# JWT
+JWT_SECRET=super_clave_secreta
 
-Ejecutar en desarrollo:
-
-npm run dev
-
-Compilar Proyecto:
-
-npm run build
-
-Ejecutar en produccion: 
-
-npm start
+# Email (envío de correos)
+EMAIL_USER=tu_correo@ejemplo.com
+EMAIL_PASS=tu_password_o_app_password
+```
+⚠️ Nota: estos valores son solo de ejemplo.
+El archivo .env no debe subirse al repositorio por motivos de seguridad.
 
 ---
 
-🌐 Deploy
+## ▶️ Scripts Disponibles
 
-El backend se encuentra desplegado en Render y disponible públicamente.
+ - Instalar dependencias:
+```bash
+npm install
+```
+
+- Ejecutar en desarrollo:
+```bash
+npm run dev
+```
+El servidor se levanta en (por ejemplo):
+
+```text
+http://localhost:3000
+```
+
+- Compilar Proyecto:
+```bash
+npm run build
+```
+
+- Ejecutar en produccion: 
+```bash
+npm start
+```
+---
+
+## 🌐 Deploy
+
+El backend se encuentra desplegado en **Render** y disponible públicamente.
 
 URL base:
 
+```text
 https://backend-utn-u8mm.onrender.com
-
+```
 ---
 
-📌 Endpoints Principales
-🔐 Autenticación
+## 📌 Endpoints Principales
+### 🔐 Autenticación
 
-POST /auth/register
+- POST /auth/register
+Registra un nuevo usuario.
 
+```json
 {
   "email": "usuario@mail.com",
   "password": "password123"
 }
+```
 
-POST /auth/login
+- POST /auth/login
+Inicia sesión.
 
+```json
 {
   "email": "usuario@mail.com",
   "password": "password123"
 }
-
+```
 ---
 
-📦 Productos
+## 📦 Productos
 
-GET /products
+- GET /products
 Permite filtros mediante query params:
 
+Ejemplos: 
 name
-
 category
-
 minPrice
-
 maxPrice
-
 stock
 
-POST /products 🔒
+- POST /products 🔒
 Ruta protegida con JWT.
 Permite crear un producto y subir una imagen (multipart/form-data).
 
-PATCH /products/:id 🔒
-Actualizar producto.
+- PATCH /products/:id 🔒
+Actualizar un producto.
 
-DELETE /products/:id 🔒
-Eliminar producto.
+- DELETE /products/:id 🔒
+Eliminar un producto.
 
 ---
 
-🔒 Seguridad
+## 🔒 Seguridad
 
 Autenticación con JWT
 
@@ -146,7 +204,7 @@ Rate limit aplicado en rutas de autenticación
 
 ---
 
-📸 Subida de Archivos
+## 📸 Subida de Archivos
 
 Implementada con multer
 
@@ -156,49 +214,40 @@ Servidos de forma estática
 
 ---
 
-🧪 Pruebas
+## 🧪 Pruebas
 
-Las rutas fueron probadas utilizando Bruno / Postman, verificando:
+Las rutas fueron probadas utilizando Bruno, verificando:
 
-Registro
+- Registro
 
-Login
+- Login
 
-Token JWT
+- Token JWT
 
-CRUD de productos
+- CRUD de productos
 
-Filtros
+- Filtros
 
-Autorización
+- Autorización
 
 ---
 
-✅ Cumplimiento de la Consigna
+## ✅ Cumplimiento de la Consigna
 
 ✔ API REST en TypeScript
-
 ✔ Arquitectura organizada
-
 ✔ MongoDB
-
 ✔ JWT
-
 ✔ Validaciones
-
 ✔ Query Params
-
 ✔ Subida de archivos
-
 ✔ Logger
-
 ✔ Deploy en Render
-
 ✔ Variables de entorno
 
 ---
 
-📝 Observaciones
+## 📝 Observaciones
 
 Este backend fue desarrollado como parte del trabajo final integrador de la diplomatura, aplicando los contenidos vistos durante la cursada.
 

@@ -8,12 +8,13 @@
     "strict": true, // Activa las validaciones más importantes
     "noImplicitAny": true, // No permite variables sin tipo
     // "noUnusedLocals": true, // Detecta variables locales sin usar
+    "skipLibCheck": true,
     "resolveJsonModule": true // Permite importar archivos .json
   },
   "include": [
     "src/**/*"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules", "dist"
   ]
 }
