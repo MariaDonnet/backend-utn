@@ -1,5 +1,6 @@
-API REST desarrollada en Node.js + Express + TypeScript + MongoDB, como parte del
-Trabajo Práctico: Desarrollo y Deploy de una API REST en TypeScript (UTN).
+API REST en TypeScript
+> API REST desarrollada en Node.js + Express + TypeScript + MongoDB, como parte del
+> Trabajo Práctico: Desarrollo y Deploy de una API REST en TypeScript (UTN).
 
 Este repositorio contiene solo **el backend** del proyecto.
 
@@ -23,7 +24,6 @@ Desarrollar una API REST funcional que permita:
 - Autenticación y autorización con JWT
 - Gestión de productos (CRUD)
 - Filtrado mediante query params
-- Subida de imágenes
 - Uso de variables de entorno
 - Deploy del backend en un servicio cloud (Render)
 
@@ -171,6 +171,7 @@ Inicia sesión.
 ## 📦 Productos
 
 - GET /products
+Obtiene el listado de productos. 
 Permite filtros mediante query params:
 
 Ejemplos: 
@@ -218,17 +219,17 @@ Servidos de forma estática
 
 Las rutas fueron probadas utilizando Bruno, verificando:
 
-- Registro
+- Registro de usuarios
 
-- Login
+- Login y generación de JWT
 
-- Token JWT
+- Acceso a rutas protegidas
 
-- CRUD de productos
+- CRUD completo de productos
 
-- Filtros
+- Funcionamiento de filtros
 
-- Autorización
+- Manejo de errores y validaciones
 
 ---
 
@@ -247,7 +248,25 @@ Las rutas fueron probadas utilizando Bruno, verificando:
 
 ---
 
+## 🚀 Mejoras Futuras
+
+Algunas funcionalidades fueron planificadas pero no implementadas en esta entrega:
+
+- Implementación completa y estable de actualización de imágenes en productos.
+
+- Envío real de correos electrónicos desde el formulario de contacto (usando Resend)
+
+- Paginación de resultados en el endpoint de productos.
+
+- Roles de usuario (admin / user).
+
+- Tests automatizados.
+
+Estas mejoras quedan como posibles extensiones del proyecto.
+
+---
+
 ## 📝 Observaciones
 
-Este backend fue desarrollado como parte del trabajo final integrador de la diplomatura, aplicando los contenidos vistos durante la cursada.
+Este backend fue desarrollado como parte del trabajo final integrador de la diplomatura full stack, aplicando los contenidos vistos durante la cursada.
 
