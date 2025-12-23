@@ -13,7 +13,7 @@ Este repositorio contiene solo **el backend** del proyecto.
 - **Proyecto:** Backend UTN – API REST  
 - **Rol:** Estudiante de Programación Web Full Stack  
 - **GitHub:** https://github.com/MariaDonnet  
-- - **LinkedIn:** [Maria Soledad Donnet](https://www.linkedin.com/in/maría-soledad-donnet/)
+- **LinkedIn:** [Maria Soledad Donnet](https://www.linkedin.com/in/maría-soledad-donnet/)
 
 ---
 
@@ -176,7 +176,7 @@ Obtiene el listado de productos.
 Permite filtros mediante query params:
 
 Ejemplos: 
-- - name: filtra por nombre (búsqueda parcial)
+  - name: filtra por nombre (búsqueda parcial)
 
 ```bash
 {
@@ -184,7 +184,7 @@ GET /products?name=hamburguesa
 }
 ```
 
-- - category: filtra por categoría
+  - category: filtra por categoría
 
 ```bash
 {
@@ -192,7 +192,7 @@ GET /products?category=veg
 }
 ```
 
-- - minPrice:filtra por mínimo precio 
+  - minPrice:filtra por mínimo precio 
 
 ```bash
 {
@@ -200,7 +200,7 @@ GET /products?minPrice=500
 }
 ```
 
-- - maxPrice: filtra por máximo precio
+  - maxPrice: filtra por máximo precio
 
 ```bash
 {
@@ -208,7 +208,7 @@ GET /products?maxPrice=2000
 } 
 ```
 
-- - stock:filtra por stock exacto
+  - stock:filtra por stock exacto
 
 ```bash
 {
