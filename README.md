@@ -1,4 +1,5 @@
-API REST en TypeScript
+# Backend UTN – API REST en TypeScript
+
 > API REST desarrollada en Node.js + Express + TypeScript + MongoDB, como parte del
 > Trabajo Práctico: Desarrollo y Deploy de una API REST en TypeScript (UTN).
 
@@ -12,7 +13,7 @@ Este repositorio contiene solo **el backend** del proyecto.
 - **Proyecto:** Backend UTN – API REST  
 - **Rol:** Estudiante de Programación Web Full Stack  
 - **GitHub:** https://github.com/MariaDonnet  
-- **Linkedin:**[Maria Soledad Donnet] (https://www.linkedin.com/in/maría-soledad-donnet/)
+- - **LinkedIn:** [Maria Soledad Donnet](https://www.linkedin.com/in/maría-soledad-donnet/)
 
 ---
 
@@ -175,11 +176,42 @@ Obtiene el listado de productos.
 Permite filtros mediante query params:
 
 Ejemplos: 
-name
-category
-minPrice
-maxPrice
-stock
+name: filtra por nombre (búsqueda parcial)
+
+```text
+{
+GET /products?name=hamburguesa
+}```
+
+category: filtra por categoría
+
+```text
+{
+GET /products?category=veg
+}```
+
+minPrice:filtra por mínimo precio 
+
+```text
+{
+GET /products?minPrice=500
+}```
+
+maxPrice: filtra por máximo precio
+
+```text
+{
+GET /products?maxPrice=2000
+}```
+
+stock:filtra por stock exacto
+
+
+```text
+{
+GET /products?category=hogar&minPrice=1000
+}
+```
 
 - POST /products 🔒
 Ruta protegida con JWT.
@@ -231,19 +263,32 @@ Las rutas fueron probadas utilizando Bruno, verificando:
 
 - Manejo de errores y validaciones
 
+Las imágenes se encuentran en `/docs/bruno-tests`. 
+
+Las capturas se incluyen en el repositorio para facilitar la corrección.
+
 ---
 
 ## ✅ Cumplimiento de la Consigna
 
 ✔ API REST en TypeScript
+
 ✔ Arquitectura organizada
+
 ✔ MongoDB
+
 ✔ JWT
+
 ✔ Validaciones
+
 ✔ Query Params
+
 ✔ Subida de archivos
+
 ✔ Logger
+
 ✔ Deploy en Render
+
 ✔ Variables de entorno
 
 ---
