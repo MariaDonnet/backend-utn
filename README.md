@@ -176,38 +176,41 @@ Obtiene el listado de productos.
 Permite filtros mediante query params:
 
 Ejemplos: 
-name: filtra por nombre (búsqueda parcial)
+- - name: filtra por nombre (búsqueda parcial)
 
-```text
+```bash
 {
 GET /products?name=hamburguesa
-}```
+}
+```
 
-category: filtra por categoría
+- - category: filtra por categoría
 
-```text
+```bash
 {
 GET /products?category=veg
-}```
+}
+```
 
-minPrice:filtra por mínimo precio 
+- - minPrice:filtra por mínimo precio 
 
-```text
+```bash
 {
 GET /products?minPrice=500
-}```
+}
+```
 
-maxPrice: filtra por máximo precio
+- - maxPrice: filtra por máximo precio
 
-```text
+```bash
 {
 GET /products?maxPrice=2000
-}```
+} 
+```
 
-stock:filtra por stock exacto
+- - stock:filtra por stock exacto
 
-
-```text
+```bash
 {
 GET /products?category=hogar&minPrice=1000
 }
